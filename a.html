@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+<body>
+    <script>
+        function validate ()
+                {
+
+                    var emp_name=document. getElementById("txtename").value;
+                    var dob=document. getElementById("txtbirth").value;
+                    var joining_date=document. getElementById("txtjdate").value;
+                    var salary=document. getElementById("txtsalary").value;
+                    var reg=/^[a-z] +$/;
+                    var pattern = /^ ([0-9]{2}) -([0-9]{2}) -([0-9]{4}) $/;
+                    var sal=/^\d {1,6} (? \.\d {0,2})? $/;
+                        if (emp_name. match(reg))
+                        {
+                        alert ("Employe Name is validated");
+                        }
+                        else {
+                        alert ("Employe name not validated");
+                        }
+                        if (dob == null || dob == "" || !pattern.test(dob))
+                        {
+                        alert (" date of birth validated");
+                        }
+                        else {
+                        alert ("birth date not validated");
+                        }
+                        if (joining_date== null || joining_date == "" ||!
+                        pattern.test(joining_date))
+                        {
+                        alert (" joining date validated");
+                        }
+                        else {
+                        alert ("joining date not validated");
+                        }
+                        if (salary== null || salary == "" ||! sal.test(salary))
+                        {
+                        alert (" salary not validated");
+                        }
+                        else {
+                        alert ("salary validated");
+                        }
+
+                        }
+     </script>
+<table class="table">
+    <tr>
+        <td>
+            Enter Employe Name:
+        </td>
+        <td>
+            <input type="text" id="txtename">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Date_Of_Birth:
+        </td>
+         <td>
+             <input type="text" id="txtbirth" class="form-control">
+        </td>
+    </tr>
+   
+    <tr>
+        <td>
+            Joining-Date:
+        </td>
+        <td>
+            <input type="text" id="txtjdate" class="form-control">
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            Salary:
+        </td>
+        <td>
+        <input type="text" id="txtsalary" class="form-control">
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <input type="button" onclick="validate ()" value="Validate">
+        </td>
+    </tr>
+</table>
+</body>
+</html>
